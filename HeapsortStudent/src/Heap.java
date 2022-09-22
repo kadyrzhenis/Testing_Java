@@ -32,8 +32,8 @@ public class Heap {
      * @return desired index of value of desired element
      */
     private int leftChildIndex(int index){
-        if (valueList.size() > (2*index)-1){
-            return (2*(index)-1);
+        if (valueList.size() > (2*index)+1){
+            return (2*(index)+1);
         }
         else return -1;
     }
