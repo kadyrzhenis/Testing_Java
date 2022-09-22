@@ -86,14 +86,14 @@ public class Heap {
 
             if (currentElem < leftChild ){
                 if (leftChild > rightChild){
-                    valueList.set(index,rightChild);
+                    valueList.set(index,leftChild);
                     valueList.set(leftChildIndex, currentElem);
                     BubbleDown(leftChildIndex);
                 }
                 else{
                     valueList.set(index, rightChild);
                     valueList.set(rightChildIndex, currentElem);
-
+                    BubbleDown(leftChildIndex);
                 }
             }
             else {
