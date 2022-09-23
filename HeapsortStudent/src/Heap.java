@@ -152,10 +152,10 @@ public class Heap {
             int parentOfRemoved = elemParent(indexOfRemoveElem);
 
             if (lastElem < parentOfRemoved){
-                BubbleUp(indexOfRemoveElem);
+                BubbleDown(indexOfRemoveElem);
             }
             else if (lastElem > parentOfRemoved) {
-                BubbleDown(indexOfRemoveElem);
+                BubbleUp(indexOfRemoveElem);
             }
         }
     }
