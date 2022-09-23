@@ -93,7 +93,7 @@ public class Heap {
                 else{
                     valueList.set(index, rightChild);
                     valueList.set(rightChildIndex, currentElem);
-                    BubbleDown(leftChildIndex);
+                    BubbleDown(rightChildIndex);
                 }
             }
             else {
