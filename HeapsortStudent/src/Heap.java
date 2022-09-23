@@ -68,7 +68,7 @@ public class Heap {
 
     private int elemParentIndex(int index){
         if (index > 0 ){
-            return index/2;
+            return (index/2)-(index+1)%2;
         }
         else return -1;
     }
@@ -118,7 +118,7 @@ public class Heap {
             int parent = elemParent(index);
             int parentIndex = elemParentIndex(index);
             if (currentElem > parent){
-                valueList.set(parent,index);
+                valueList.set(index,parent);       //(parent,index)
                 valueList.set(parentIndex,currentElem);
                 BubbleUp(parentIndex);
             }
